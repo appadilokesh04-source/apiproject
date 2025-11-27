@@ -7,4 +7,5 @@ def test_user_registration_and_login(client):
     resp2 = client.post("/api/users/login", data={"username":"test@example.com","password":"strongpass"})
     assert resp2.status_code == 200
     t = resp2.json()
+
     assert "access_token" in t
