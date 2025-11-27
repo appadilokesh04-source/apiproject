@@ -31,3 +31,4 @@ def test_create_and_fetch_product(client):
     resp2 = client.get(f"/api/products/{pid}")
     assert resp2.status_code == 200
     assert resp2.json()["name"] == "Ring"
+
